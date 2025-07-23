@@ -3,7 +3,7 @@
 ## מטרת המשימה
 לממש מערכת של קלפי משחק בפייתון תוך שימוש בתכנות מונחה עצמים, הכוללת שימוש ב-Enum, property decorators, custom decorators, iterators ואופרטורים מובנים (dunder methods)
 
-<img src="card_diagram.png">
+<img src="deck_exam2.png">
 
 ## דרישות המשימה
 ### Custom Exception
