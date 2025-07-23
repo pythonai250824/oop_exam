@@ -6,24 +6,6 @@
 <img src="deck_exam2.png">
 
 ## דרישות המשימה
-### Custom Exception
-1. יש ליצור exception בשם `DeckCheatingError` שמשמש לזיהוי מקרים בהם קיים חשד למניפולציה של חפיסת קלפים.
-
-### Decorator `fair_deck`
-1. יש לממש decorator בשם `fair_deck` שמטרתו לוודא שפונקציות המחזירות חפיסות קלפים אכן מערבבות אותן כראוי.
-2. ה-decorator יפעיל את הפונקציה המקושטת פעמיים ויבדוק שהתוצאות שונות:
-   - הפעלה ראשונה: לקבלת התוצאה שתוחזר למשתמש
-   - הפעלה שנייה: לבדיקה בלבד (התוצאה לא תוחזר)
-   - אם שתי ההפעלות מחזירות את אותה חפיסה בדיוק (אותו סדר קלפים), יש לזרוק חריגה מסוג `DeckCheatingError`
-   - אם ההפעלות מחזירות חפיסות שונות, יש להחזיר את התוצאה של ההפעלה הראשונה
-
-### מחלקת `CardSuit` (Enum) -- בונוס
-1. יש ליצור Enum שמייצג את סוגי הקלפים השונים: HEARTS, DIAMONDS, CLUBS, SPADES
-2. כל סוג קלף מייצג את הערך היחסי שלו במשחק (למשל SPADES = 4, HEARTS = 3, וכו')
-
-### מחלקת `CardRank` (Enum) -- בונוס
-1. יש ליצור Enum שמייצג את ערכי הקלפים: TWO, THREE, FOUR, FIVE, SIX, SEVEN, EIGHT, NINE, TEN, JACK, QUEEN, KING, ACE
-2. כל ערך קלף מייצג את הערך המספרי שלו במשחק (למשל TWO = 2, THREE = 3, ..., ACE = 14)
 
 ### מחלקת `Card`
 1. שדות:
@@ -68,16 +50,37 @@
 4. הערך היחסי של סוגי הקלפים הוא: SPADES > HEARTS > DIAMONDS > CLUBS.
 
 # גישה ישירה לקלפים לפי אינדקס באמצעות __getitem__
+```
 print("\nAccessing cards directly by index:")
 for i in range(5):
     print(f"Card at index {i}: {deck[i]}")
+```
 
 # מעבר על כל הקלפים בחפיסה באמצעות האיטרטור
+```
 print("\nIterating through all cards in the deck:")
 for card in deck:
     print(card)
 ```
 
+### Custom Exception
+יש ליצור exception בשם `DeckCheatingError` שמשמש לזיהוי מקרים בהם קיים חשד למניפולציה של חפיסת קלפים
+
+### Decorator `fair_deck`
+1. יש לממש decorator בשם `fair_deck` שמטרתו לוודא שפונקציות המחזירות חפיסות קלפים אכן מערבבות אותן כראוי.
+2. ה-decorator יפעיל את הפונקציה המקושטת פעמיים ויבדוק שהתוצאות שונות:
+   - הפעלה ראשונה: לקבלת התוצאה שתוחזר למשתמש
+   - הפעלה שנייה: לבדיקה בלבד (התוצאה לא תוחזר)
+   - אם שתי ההפעלות מחזירות את אותה חפיסה בדיוק (אותו סדר קלפים), יש לזרוק חריגה מסוג `DeckCheatingError`
+   - אם ההפעלות מחזירות חפיסות שונות, יש להחזיר את התוצאה של ההפעלה הראשונה
+
+### מחלקת `CardSuit` (Enum) -- בונוס
+1. יש ליצור Enum שמייצג את סוגי הקלפים השונים: HEARTS, DIAMONDS, CLUBS, SPADES
+2. כל סוג קלף מייצג את הערך היחסי שלו במשחק (למשל SPADES = 4, HEARTS = 3, וכו')
+
+### מחלקת `CardRank` (Enum) -- בונוס
+1. יש ליצור Enum שמייצג את ערכי הקלפים: TWO, THREE, FOUR, FIVE, SIX, SEVEN, EIGHT, NINE, TEN, JACK, QUEEN, KING, ACE
+2. כל ערך קלף מייצג את הערך המספרי שלו במשחק (למשל TWO = 2, THREE = 3, ..., ACE = 14)
 
 ## הגשה
 1. יש להגיש קובץ Python אחד הכולל את כל המחלקות, ה-decorator ופונקציית `main` עם תיעוד מלא (docstrings)
