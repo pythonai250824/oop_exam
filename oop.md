@@ -12,7 +12,7 @@
    - `_suit`: סוג הקלף (מסוג `CardSuit`)
    - `_rank`: הערך של הקלף (מסוג `CardRank`)
 2. מתודות:
-   - `__init__(suit, rank)`: בנאי המקבל סוג קלף, ערך, והאם הקלף גלוי
+   - `__init__(suit, rank)`: בנאי המקבל סוג קלף, ערך
    - `suit` (@property): מחזיר את סוג הקלף (property לקריאה בלבד)
    - `rank` (@property): מחזיר את ערך הקלף (property לקריאה בלבד)
    - `get_display_name()`: מחזיר את שם הקלף בפורמט מתאים (למשל: "Ace of Spades", "Jack of Hearts")
