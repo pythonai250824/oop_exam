@@ -50,14 +50,14 @@
 
 # גישה ישירה לקלפים לפי אינדקס באמצעות __getitem__
 ```
-print("\nAccessing cards directly by index:")
+print("Accessing cards directly by index:")
 for i in range(5):
     print(f"Card at index {i}: {deck[i]}")
 ```
 
 # מעבר על כל הקלפים בחפיסה באמצעות האיטרטור
 ```
-print("\nIterating through all cards in the deck:")
+print("Iterating through all cards in the deck:")
 for card in deck:
     print(card)
 ```
